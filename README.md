@@ -8,7 +8,7 @@ The goal of this repo is to take in string math expressions containing variables
 ## Functionality
 As of last updating the readme, it supports addition, subtraction, multiplication, division, exponentiation (including sqrts), sine, and cosine. The expression grammar is given in `interpreter.h` at the top. The great thing about this program is it's super easy to add any new functionality you want by just extending the lexer to parse it and then the interpreter to evaluate it.
 
-Implicit multiplication (e.g. `2sin(3)x`) is not supported in the current version (should be `2*sin(3)*x`), because I don't really need it. If you want to add it though, just change the grammar and go for it. It works surprisingly well and could definitely be useful to someone, so make it yours.
+Implicit multiplication (e.g. `2sin(3)x`) is not supported in the current version (should be `2*sin(3)*x`), because I don't really need it. If you want to add it though, just change the grammar and go for it. It works surprisingly well as is and could definitely be useful to someone, so make it yours.
 
 ## How to use
 There's a `lexer` class that gets fed in a string and then has a `get_next_token` method that returns tokens from said string, one at a time. There's an `interpreter` class that takes in that lexer, grabs all its tokens, and then can evaluate the mathematical expression given some input variables stored in an `unordered_map`. The repo is designed such that you parse the string once with the lexer and then used the parsed data multiple times with the interpreter to speed up execution. Example usage:
@@ -30,3 +30,9 @@ vars["x"] = 2;
 std::cout << inter.interpret(vars) << std::endl; //7.21865
 ```
 Also, make sure to compile with C++11 or higher!
+
+## Todo
+Right now all my expressions are just `std::runtime_error` because it was easiest. I want to change that and add some comments into the code. After that, I'll add some more functions.
+
+## Credit
+Credit where credit is due. I learned about lexers and interpreters from [this](https://ruslanspivak.com/lsbasi-part1/) lovely tutorial that teaches you how to build a pascal interpreter in python.
