@@ -61,6 +61,10 @@ double interpreter::numeric_expression(const std::unordered_map<std::string, dou
 		eat(MINUS);
 		double val = exponential_expression(vars);
 		return -val;
+	} else if(current_token.get_type() == PLUS) {
+		eat(PLUS);
+		double val = exponential_expression(vars);
+		return val;
 	} else if(current_token.get_type() == VAR) {
 		auto varit = vars.find(current_token.get_string_value());
 		if(varit == vars.end()) {
