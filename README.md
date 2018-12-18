@@ -35,4 +35,4 @@ Also, make sure to compile with C++11 or higher!
 Right now all my expressions are just `std::runtime_error` because it was easiest. I want to change that and add some comments into the code. After that, I'll add some more functions.
 
 ## Credit
-Credit where credit is due. I learned about lexers and interpreters from [this](https://ruslanspivak.com/lsbasi-part1/) lovely tutorial that teaches you how to build a pascal interpreter in python.
+Credit where credit is due. I learned about lexers and interpreters from [this](https://ruslanspivak.com/lsbasi-part1/) lovely tutorial that teaches you how to build a Pascal interpreter in Python.
