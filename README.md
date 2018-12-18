@@ -12,14 +12,19 @@ Implicit multiplication (e.g. `2sin(3)x`) is not supported in the current versio
 
 ## How to use
 There's a `lexer` class that gets fed in a string and then has a `get_next_token` method that gives you the nice juicy tokens from the string. There's an `interpreter` class that takes in that lexer, grabs all its tokens, and then can evaluate the mathematical expression given some input variables stored in an `unordered_map`. The repo is designed such that you parse the string once with the lexer and then used the parsed data multiple times with the interpreter to speed up execution. Example usage:
-```
+```cpp
+//Assign variables
 std::unordered_map<std::string, double> vars;
 vars["x"] = 5;
 vars["pi"] = 3.14159265359;
 vars["e"] = 2.71828182846;
+
+//Create lexer and feed it into interpreter
 lexer lex("3*sin(pi/2)+e^sin(x)-1/2+5^(1/2)");
 interpreter inter;
 inter.fetch_tokens(lex);
+
+//Evaluate at multiple values of x
 std::cout << inter.interpret(vars) << std::endl; //5.11937
 vars["x"] = 2;
 std::cout << inter.interpret(vars) << std::endl; //7.21865
