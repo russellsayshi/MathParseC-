@@ -40,8 +40,6 @@ double interpreter::group_expression(const std::unordered_map<std::string, doubl
 }
 
 double interpreter::exponential_expression(const std::unordered_map<std::string, double>& vars) {
-	#ifdef DEBUG
-	#endif
 	double g1 = group_expression(vars);
 	if(current_token.get_type() == EXP) {
 		eat(EXP);
