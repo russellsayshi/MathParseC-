@@ -11,7 +11,7 @@ As of last updating the readme, it supports addition, subtraction, multiplicatio
 Implicit multiplication (e.g. `2sin(3)x`) is not supported in the current version (should be `2*sin(3)*x`), because I don't really need it. If you want to add it though, just change the grammar and go for it. It works surprisingly well and could definitely be useful to someone, so make it yours.
 
 ## How to use
-There's a `lexer` class that gets fed in a string and then has a `get_next_token` method that gives you the nice juicy tokens from the string. There's an `interpreter` class that takes in that lexer, grabs all its tokens, and then can evaluate the mathematical expression given some input variables stored in an `unordered_map`. The repo is designed such that you parse the string once with the lexer and then used the parsed data multiple times with the interpreter to speed up execution. Example usage:
+There's a `lexer` class that gets fed in a string and then has a `get_next_token` method that returns tokens from said string, one at a time. There's an `interpreter` class that takes in that lexer, grabs all its tokens, and then can evaluate the mathematical expression given some input variables stored in an `unordered_map`. The repo is designed such that you parse the string once with the lexer and then used the parsed data multiple times with the interpreter to speed up execution. Example usage:
 ```cpp
 //Assign variables
 std::unordered_map<std::string, double> vars;
