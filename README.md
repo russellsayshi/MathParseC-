@@ -3,7 +3,7 @@ Another ultrafast repo I'm using to study for math class in a roundabout way (I 
 
 
 ## Purpose
-The goal of this repo is to grab math expressions containing variables as a string and then evaluate them at different points.
+The goal of this repo is to take in string math expressions containing variables and then evaluate them at different points.
 
 ## Functionality
 As of last updating the readme, it supports addition, subtraction, multiplication, division, exponentiation (including sqrts), sine, and cosine. The expression grammar is given in `interpreter.h` at the top. The great thing about this program is it's super easy to add any new functionality you want by just extending the lexer to parse it and then the interpreter to evaluate it.
