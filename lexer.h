@@ -2,9 +2,10 @@
 #define MPC_LEXER_H
 
 #include <string>
-#include <exception>
+#include <stdexcept>
 #include <cmath>
-#include "integer.h"
+#include "token.h"
+#include "tokentype.h"
 
 class lexer {
 private:
@@ -13,6 +14,8 @@ private:
 	char current_char;
 
 	double get_double();
+	std::string get_name();
+	bool is_part_of_numeral(char);
 
 public:
 	lexer(std::string);
