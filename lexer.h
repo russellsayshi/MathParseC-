@@ -21,6 +21,7 @@ public:
 	lexer(std::string);
 	bool advance(); //return value indicates if more characters exist
 	void skip_whitespace();
+	void reset();
 	token get_next_token();
 };
 

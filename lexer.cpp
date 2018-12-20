@@ -2,6 +2,10 @@
 
 lexer::lexer(std::string str) {
 	text = str;
+	reset();
+}
+
+void lexer::reset() {
 	pos = 0;
 	current_char = text[pos];
 }

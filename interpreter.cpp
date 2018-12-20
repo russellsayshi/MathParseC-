@@ -13,6 +13,7 @@ void interpreter::fetch_tokens(lexer& lexer) {
 			break;
 		}
 	}
+	lexer.reset();
 }
 
 void interpreter::eat(tokentype tt) {
