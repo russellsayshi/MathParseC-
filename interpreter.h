@@ -26,17 +26,17 @@ private:
 	unsigned int token_ptr;
 
 	void eat(tokentype);
-	double numeric_expression(const std::unordered_map<std::string, double>& vars);
-	double group_expression(const std::unordered_map<std::string, double>& vars);
-	double exponential_expression(const std::unordered_map<std::string, double>& vars);
-	double multiplicative_expression(const std::unordered_map<std::string, double>& vars);
-	double additive_expression(const std::unordered_map<std::string, double>& vars);
+	long double numeric_expression(const std::unordered_map<std::string, long double>& vars);
+	long double group_expression(const std::unordered_map<std::string, long double>& vars);
+	long double exponential_expression(const std::unordered_map<std::string, long double>& vars);
+	long double multiplicative_expression(const std::unordered_map<std::string, long double>& vars);
+	long double additive_expression(const std::unordered_map<std::string, long double>& vars);
 	std::vector<token> tokens;
 
 public:
 	interpreter();
 	void fetch_tokens(lexer& lex);
-	double interpret(const std::unordered_map<std::string, double>& map);
+	long double interpret(const std::unordered_map<std::string, long double>& map);
 	
 };
 

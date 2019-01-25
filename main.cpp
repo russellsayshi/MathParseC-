@@ -7,7 +7,7 @@
 int main(int argc, char** argv) {
 	interpreter i;
 	std::string input;
-	std::unordered_map<std::string, double> vars;
+	std::unordered_map<std::string, long double> vars;
 	vars["x"] = 5;
 	vars["pi"] = 3.14159265359;
 	vars["e"] = 2.71828182846;

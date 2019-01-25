@@ -2,7 +2,7 @@
 #include "token.h"
 #include "tokentype.h"
 
-token::token(tokentype typ, double dat) : type(typ), data(dat) {}
+token::token(tokentype typ, long double dat) : type(typ), data(dat) {}
 token::token(tokentype typ, std::string nam) : type(typ), name(nam) {}
 token::token(tokentype typ) : token(typ, 0) {}
 
@@ -10,7 +10,7 @@ tokentype token::get_type() {
 	return type;
 }
 
-double token::get_double_value() {
+long double token::get_double_value() {
 	return data;
 }
 

@@ -34,8 +34,8 @@ std::string lexer::get_name() {
 	return ret;
 }
 
-double lexer::get_double() {
-	double val = 0;
+long double lexer::get_double() {
+	long double val = 0;
 	bool pre_decimal = true;
 	int digit_counter = 0;
 	while(is_part_of_numeral(current_char)) {
@@ -46,7 +46,7 @@ double lexer::get_double() {
 			val *= 10;
 			val += (int)(current_char - '0');
 		} else {
-			val += ((int)(current_char - '0'))/pow(10, ++digit_counter);
+			val += ((int)(current_char - '0'))/(long double)(pow(10, ++digit_counter));
 		}
 		if(!advance()) return val;
 	}

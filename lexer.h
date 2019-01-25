@@ -13,7 +13,7 @@ private:
 	unsigned int pos;
 	char current_char;
 
-	double get_double();
+	long double get_double();
 	std::string get_name();
 	bool is_part_of_numeral(char);
 
