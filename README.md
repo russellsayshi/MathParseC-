@@ -40,6 +40,7 @@ cmake ..
 make
 sudo make install
 ```
+... and make sure to compile future programs with -lcmathparse
 
 ## Todo
 Right now all my expressions are just `std::runtime_error` because it was easiest. I want to change that and add some comments into the code. After that, I'll add some more functions.
