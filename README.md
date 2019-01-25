@@ -31,6 +31,17 @@ std::cout << inter.interpret(vars) << std::endl; //7.21865
 ```
 Also, make sure to compile with C++11 or higher!
 
+## How to install
+Clone it, go into the folder, and then
+```
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+```
+... and make sure to compile future programs with `-lcmathparse`
+
 ## Todo
 Right now all my expressions are just `std::runtime_error` because it was easiest. I want to change that and add some comments into the code. After that, I'll add some more functions.
 
